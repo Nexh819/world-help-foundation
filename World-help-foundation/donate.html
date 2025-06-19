@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | World Help Foundation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🌍</div>
+                <div class="logo-text">
+                    <div class="logo-main">World Help</div>
+                    <div class="logo-sub">Foundation</div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="get-involved.html">Get Involved</a></li>
+                    <li><a href="impact.html">Impact</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Make a Donation</h1>
+                <p>Your contribution can make a significant impact. Join us in our mission to transform lives through global humanitarian innovation.</p>
+            </div>
+        </section>
+
+        <section class="donation-form">
+            <div class="container">
+                <h2>Donation Form</h2>
+                
+                <div class="donation-progress">
+                    <h3>Monthly Goal Progress</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-text">
+    <span id="currentAmount">$12,450</span>
+    <span>raised of <span id="goalAmount">$25,000</span> goal</span>
+</div>
+                </div>
+
+                <div class="form-container">
+                    <form id="donationForm">
+                        <div class="form-group">
+                            <label for="amount">Donation Amount</label>
+                            <div class="donation-options">
+                                <div class="donation-option" onclick="selectAmount(this, 25)">
+    <span>$25</span>
+</div>
+<div class="donation-option" onclick="selectAmount(this, 50)">
+    <span>$50</span>
+</div>
+<div class="donation-option" onclick="selectAmount(this, 100)">
+    <span>$100</span>
+</div>
+<div class="donation-option" onclick="selectAmount(this, 250)">
+    <span>$250</span>
+</div>
+<div class="donation-option" onclick="selectAmount(this, 500)">
+    <span>$500</span>
+</div>
+<div class="donation-option" onclick="selectAmount(this, '')">
+    <span>Other</span>
+</div>
+                            </div>
+                            <input type="number" id="amount" name="amount" placeholder="Enter custom amount" required min="1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="frequency">Donation Frequency</label>
+                            <select id="frequency" name="frequency">
+                                <option value="one-time">One Time</option>
+                                <option value="monthly">Monthly</option>
+                                <option value="quarterly">Quarterly</option>
+                                <option value="yearly">Yearly</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="program">Support Program (Optional)</label>
+                            <select id="program" name="program">
+                                <option value="">Where needed most</option>
+                                <option value="clean-water">Clean Water Initiative</option>
+                                <option value="education">Education Support</option>
+                                <option value="healthcare">Healthcare Access</option>
+                                <option value="emergency-relief">Emergency Relief</option>
+                                <option value="food-security">Food Security</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="payment">Payment Method</label>
+                            <div class="payment-methods">
+                                <label class="payment-method">
+                                    <input type="radio" name="payment" value="credit-card" checked>
+                                    <span>💳 Credit Card</span>
+                                </label>
+                                <label class="payment-method">
+                                    <input type="radio" name="payment" value="paypal">
+                                    <span>🟦 PayPal</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="newsletter" name="newsletter" style="width: auto; margin-right: 0.5rem;">
+                                Subscribe to our newsletter for impact updates
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="anonymous" name="anonymous" style="width: auto; margin-right: 0.5rem;">
+                                Make this donation anonymous
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">
+                            <span>Donate Now</span>
+                        </button>
+
+                        <div class="security-badge">
+                            Your donation is secure and encrypted
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="get-involved.html">Get Involved</a></li>
+                <li><a href="impact.html">Impact</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <p>&copy; 2025 World Help Foundation. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize progress bar
+        function updateProgressBar() {
+            const current = 12450;
+            const goal = 25000;
+            const percentage = (current / goal) * 100;
+            document.getElementById('progressFill').style.width = percentage + '%';
+        }
+
+        // Enhanced amount selection with animations
+        function selectAmount(element, amount) {
+            const options = document.querySelectorAll('.donation-option');
+            options.forEach(option => {
+                option.classList.remove('selected');
+                option.style.animation = '';
+            });
+            
+            element.classList.add('selected');
+            element.style.animation = 'pulse 0.6s ease-in-out';
+            
+            const amountInput = document.getElementById('amount');
+            amountInput.value = amount;
+            
+            // Show impact message with animation
+            showImpactMessage(amount);
+            
+            // Update progress visualization
+            if (amount) {
+                visualizeImpact(amount);
+            }
+        }
+
+        // Enhanced impact messages with more detailed information
+        function showImpactMessage(amount) {
+            // Remove existing impact message
+            const existingMessage = document.querySelector('.impact-message');
+            if (existingMessage) {
+                existingMessage.style.animation = 'slideOut 0.3s ease-in';
+                setTimeout(() => existingMessage.remove(), 300);
+            }
+            
+            if (amount) {
+                const impactMessages = {
+                    25: {
+                        icon: '💧',
+                        message: "Your $25 can provide clean water for 1 family for a month",
+                        detail: "That's approximately 120 gallons of safe drinking water!"
+                    },
+                    50: {
+                        icon: '🍎',
+                        message: "Your $50 can feed 10 children for a week",
+                        detail: "Providing nutritious meals that support healthy growth and learning"
+                    },
+                    100: {
+                        icon: '🏠',
+                        message: "Your $100 can provide emergency shelter for 2 families",
+                        detail: "Safe, weatherproof temporary housing during crisis situations"
+                    },
+                    250: {
+                        icon: '📚',
+                        message: "Your $250 can sponsor a child's education for 3 months",
+                        detail: "Including school supplies, uniforms, and educational materials"
+                    },
+                    500: {
+                        icon: '🏥',
+                        message: "Your $500 can provide medical care for 25 people",
+                        detail: "Basic healthcare services including medications and treatments"
+                    }
+                };
+                
+                const impact = impactMessages[amount];
+                if (impact) {
+                    setTimeout(() => {
+                        const impactDiv = document.createElement('div');
+                        impactDiv.className = 'impact-message';
+                        impactDiv.innerHTML = `
+                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                                <span style="font-size: 24px;">${impact.icon}</span>
+                                <strong style="color: #22c55e; font-size: 16px;">${impact.message}</strong>
+                            </div>
+                            <p style="color: #059669; font-size: 14px; margin-left: 36px;">${impact.detail}</p>
+                        `;
+                        
+                        const amountInput = document.getElementById('amount');
+                        amountInput.parentNode.appendChild(impactDiv);
+                    }, 100);
+                }
+            }
+        }
+
+        // Visualize donation impact
+        function visualizeImpact(amount) {
+            // Add visual feedback to show the impact
+            const progressBar = document.getElementById('progressFill');
+            const currentWidth = parseFloat(progressBar.style.width);
+            const additionalWidth = (amount / 25000) * 100;
+            
+            // Temporarily show what the donation would add
+            setTimeout(() => {
+                progressBar.style.background = 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)';
+                progressBar.style.width = Math.min(100, currentWidth + additionalWidth) + '%';
+                
+                setTimeout(() => {
+                    progressBar.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                    progressBar.style.width = currentWidth + '%';
+                }, 2000);
+            }, 500);
+        }
+
+        // Enhanced form validation
+        function validateForm(formData) {
+            const errors = [];
+            
+            if (!formData.get('amount') || formData.get('amount') < 1) {
+                errors.push('Please enter a valid donation amount');
+            }
+            
+            if (!formData.get('name') || formData.get('name').trim().length < 2) {
+                errors.push('Please enter your full name');
+            }
+            
+            const email = formData.get('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email || !emailRegex.test(email)) {
+                errors.push('Please enter a valid email address');
+            }
+            
+            return errors;
+        }
+
+        // Enhanced form submission with better UX
+        document.getElementById('donationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(this);
+            const button = this.querySelector('button[type="submit"]');
+            const originalText = button.innerHTML;
+            
+            // Enhanced validation
+            const errors = validateForm(formData);
+            if (errors.length > 0) {
+                alert('Please fix the following errors:\n• ' + errors.join('\n• '));
+                return;
+            }
+            
+            // Loading state with enhanced animation
+            button.innerHTML = '<span>Processing...</span>';
+            button.disabled = true;
+            button.classList.add('form-loading');
+            
+            // Add loading animation to form
+            const formContainer = document.querySelector('.form-container');
+            formContainer.style.opacity = '0.7';
+            formContainer.style.pointerEvents = 'none';
+            
+            // Simulate processing with realistic timing
+            setTimeout(() => {
+                button.innerHTML = '<span>✨ Thank you! ✨</span>';
+                button.classList.remove('form-loading');
+                
+                // Update progress bar with new donation
+                const currentAmount = parseInt(document.getElementById('currentAmount').textContent.replace('$', '').replace(',', ''));
+                const newAmount = currentAmount + parseInt(formData.get('amount'));
+                document.getElementById('currentAmount').textContent = '$' + newAmount.toLocaleString();
+                updateProgressBar();
+                
+                setTimeout(() => {
+                    // Create detailed thank you message
+                    const program = formData.get('program');
+                    const programText = program ? ` for our ${program.replace('-', ' ')} program` : '';
+                    const frequency = formData.get('frequency');
+                    const frequencyText = frequency !== 'one-time' ? `${frequency} ` : '';
+                    
+                    const thankYouMessage = `
+🎉 Thank you ${formData.get('name')}! 
+
+Your ${frequencyText}donation of $${formData.get('amount')}${programText} will make a real difference in people's lives.
+
+${formData.get('newsletter') === 'on' ? 'You\'ll receive updates about the impact of your donation via email.' : ''}
+
+A confirmation email has been sent to ${formData.get('email')}.
+                    `;
+                    
+                    alert(thankYouMessage);
+                    
+                    // Reset form with animation
+                    formContainer.style.opacity = '1';
+                    formContainer.style.pointerEvents = 'auto';
+                    button.innerHTML = originalText;
+                    button.disabled = false;
+                    this.reset();
+                    
+                    // Remove impact and calculation messages
+                    const impactMessage = document.querySelector('.impact-message');
+                    const calcMessage = document.querySelector('.yearly-calculation');
+                    if (impactMessage) impactMessage.remove();
+                    if (calcMessage) calcMessage.remove();
+                    
+                    // Remove selected state from donation options
+                    document.querySelectorAll('.donation-option').forEach(option => {
+                        option.classList.remove('selected');
+                    });
+                    
+                }, 2000);
+            }, 2000);
+        });
+
+        // Enhanced frequency calculation with more options
+        document.getElementById('frequency').addEventListener('change', function() {
+            const amount = document.getElementById('amount').value;
+            const frequency = this.value;
+            
+            // Remove existing calculation
+            const existingCalc = document.querySelector('.yearly-calculation');
+            if (existingCalc) existingCalc.remove();
+            
+            if (amount && frequency !== 'one-time') {
+                let multiplier, period, total;
+                
+                switch(frequency) {
+                    case 'monthly':
+                        multiplier = 12;
+                        period = 'year';
+                        total = amount * 12;
+                        break;
+                    case 'quarterly':
+                        multiplier = 4;
+                        period = 'year';
+                        total = amount * 4;
+                        break;
+                    case 'yearly':
+                        multiplier = 1;
+                        period = 'year';
+                        total = amount;
+                        break;
+                }
+                
+                const calcDiv = document.createElement('div');
+                calcDiv.className = 'yearly-calculation';
+                calcDiv.innerHTML = `
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                        <span style="font-size: 24px;">📊</span>
+                        <strong style="color: #667eea; font-size: 16px;">Your ${frequency} gift totals $${total.toLocaleString()} per ${period}!</strong>
+                    </div>
+                    <p style="color: #4338ca; font-size: 14px; margin-left: 36px;">
+                        ${getRecurringImpactMessage(total, frequency)}
+                    </p>
+                `;
+                
+                this.parentNode.appendChild(calcDiv);
+            }
+        });
+
+        // Get impact message for recurring donations
+        function getRecurringImpactMessage(total, frequency) {
+            if (total >= 500) {
+                return `This ${frequency} commitment could provide healthcare for ${Math.floor(total/20)} people annually!`;
+            } else if (total >= 250) {
+                return `This ${frequency} commitment could sponsor ${Math.floor(total/85)} children's education annually!`;
+            } else if (total >= 100) {
+                return `This ${frequency} commitment could provide emergency shelter for ${Math.floor(total/50)} families annually!`;
+            } else if (total >= 50) {
+                return `This ${frequency} commitment could feed ${Math.floor(total/5)} children weekly throughout the year!`;
+            } else {
+                return `This ${frequency} commitment could provide clean water for ${Math.floor(total/25)} families monthly throughout the year!`;
+            }
+        }
+
+        // Real-time form enhancement
+        document.getElementById('amount').addEventListener('input', function() {
+            const amount = parseInt(this.value);
+            if (amount && amount > 0) {
+                showImpactMessage(amount);
+                
+                // Update frequency calculation if applicable
+                const frequency = document.getElementById('frequency').value;
+                if (frequency !== 'one-time') {
+                    document.getElementById('frequency').dispatchEvent(new Event('change'));
+                }
+            } else {
+                const impactMessage = document.querySelector('.impact-message');
+                const calcMessage = document.querySelector('.yearly-calculation');
+                if (impactMessage) impactMessage.remove();
+                if (calcMessage) calcMessage.remove();
+            }
+        });
+
+        // Enhanced program selection feedback
+        document.getElementById('program').addEventListener('change', function() {
+            const program = this.value;
+            const existingInfo = document.querySelector('.program-info');
+            if (existingInfo) existingInfo.remove();
+            
+            if (program) {
+                const programInfo = {
+                    'clean-water': {
+                        icon: '💧',
+                        description: 'Providing sustainable access to clean, safe drinking water in underserved communities worldwide.'
+                    },
+                    'education': {
+                        icon: '📚',
+                        description: 'Supporting quality education through school construction, teacher training, and educational materials.'
+                    },
+                    'healthcare': {
+                        icon: '🏥',
+                        description: 'Delivering essential medical care, medications, and health education to remote areas.'
+                    },
+                    'emergency-relief': {
+                        icon: '🆘',
+                        description: 'Rapid response to natural disasters and humanitarian crises with immediate aid and support.'
+                    },
+                    'food-security': {
+                        icon: '🌾',
+                        description: 'Combating hunger through sustainable agriculture programs and nutritional support.'
+                    }
+                };
+                
+                const info = programInfo[program];
+                if (info) {
+                    const infoDiv = document.createElement('div');
+                    infoDiv.className = 'program-info';
+                    infoDiv.style.cssText = `
+                        background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+                        border: 1px solid rgba(102, 126, 234, 0.2);
+                        border-radius: 12px;
+                        padding: 1rem;
+                        margin-top: 1rem;
+                        animation: slideIn 0.3s ease-out;
+                    `;
+                    infoDiv.innerHTML = `
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <span style="font-size: 20px;">${info.icon}</span>
+                            <p style="color: #4338ca; font-size: 14px; margin: 0;">${info.description}</p>
+                        </div>
+                    `;
+                    
+                    this.parentNode.appendChild(infoDiv);
+                }
+            }
+        });
+
+        // Add keyboard navigation for donation options
+        document.addEventListener('keydown', function(e) {
+            if (e.target.classList.contains('donation-option')) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    e.target.click();
+                }
+            }
+        });
+
+        // Make donation options keyboard accessible
+        document.querySelectorAll('.donation-option').forEach(option => {
+            option.setAttribute('tabindex', '0');
+            option.setAttribute('role', 'button');
+            option.setAttribute('aria-label', `Select ${option.textContent} donation amount`);
+        });
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgressBar();
+            
+            // Add subtle animations on page load
+            const formContainer = document.querySelector('.form-container');
+            formContainer.style.opacity = '0';
+            formContainer.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                formContainer.style.transition = 'all 0.6s ease-out';
+                formContainer.style.opacity = '1';
+                formContainer.style.transform = 'translateY(0)';
+            }, 200);
+        });
+
+        // Add slide-out animation
+        const slideOutStyle = document.createElement('style');
+        slideOutStyle.textContent = `
+            @keyframes slideOut {
+                from {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                to {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+            }
+        `;
+        document.head.appendChild(slideOutStyle);
